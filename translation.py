@@ -33,6 +33,7 @@ def translate(text):
         do_sample=True,
         temperature=0.6,
         top_k=10,
+        max_length=300,
     )
     results = [result['translation_text'] for result in translate_pipeline(text)]
     postprocess(results)
